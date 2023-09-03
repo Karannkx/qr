@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator Javascript</title>
+    <title>QR Code Generator</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
         .container{
@@ -113,6 +118,12 @@
         .download li:hover{
             text-decoration: underline;
         }
+
+        /* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
     </style>
 </head>
 <body>
@@ -120,6 +131,7 @@
         <div class="header">
             <div>QR Code Generator</div>
         </div>
+        <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
         <input type="text" placeholder="Enter link or add some text" class="text-field">
         <ul class="mode">
             <li>Basic</li>
@@ -141,6 +153,19 @@
             <li>JPG</li>
         </div>
     </div>
+    <script>
+  $(document).ready(function() {
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      $('body').toggleClass('dark-mode');
+    }
+
+    // Event listener for the button click
+    $('#darkModeToggle').click(function() {
+      toggleDarkMode();
+    });
+  });
+</script>
 <script src="qr-code-styling.js"></script>
 <script src="script.js"></script>
 </body>
