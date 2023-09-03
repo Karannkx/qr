@@ -121,9 +121,15 @@
 
         /* Dark Mode Styles */
 .dark-mode {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #000; /* Dark black text color */
 }
+
+/* Adjust other elements in dark mode as needed */
+.dark-mode .header > div {
+    color: white; /* White text color for the header in dark mode */
+}
+
     </style>
 </head>
 <body>
@@ -131,7 +137,7 @@
         <div class="header">
             <div>QR Code Generator</div>
         </div>
-        <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
+        <button id="darkModeToggle" class="btn btn-secondary">Dark Mode</button>
         <input type="text" placeholder="Enter link or add some text" class="text-field">
         <ul class="mode">
             <li>Basic</li>
